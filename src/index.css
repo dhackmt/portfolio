@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@theme {  --font-roboto: "Roboto", sans-serif; }
+@theme {  --font-raleway: "Raleway", serif !important; }
+
+
+
+
+@layer utilities {
+  @keyframes sparkle {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: var(--opacity);
+    }
+    75% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .animate-sparkle {
+    animation-name: sparkle;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+}
